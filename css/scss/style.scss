@@ -6,7 +6,7 @@ $branco: #fafafa;
 $gelo: #fff;
 $cinza: #f2f1f1;
 $cinza-claro: #d0d0d0;
-$cinza-muitoclaro: #dfdfdf;
+$cinza-muitoclaro: #dfdfdf; 
 $cinza-maisescuro: #aab1b4;
 $cinza-fonte: #454748;
 $azul: #1b2f71;
@@ -99,7 +99,10 @@ div.legal{
 header.header{
   background: $branco;
   padding: 10px 0;
-
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 25;
   @media only screen and (max-width: 1024px){
     div.logo{
       margin: 0 auto;
@@ -107,8 +110,10 @@ header.header{
   }
   
   ul{
-    margin: 30px auto 0;
-    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;    
     @media only screen and (max-width: 769px){
       display: none;
     }
@@ -146,7 +151,7 @@ header.header{
       max-width: 395px;
       color: $azul;
       font-weight: 500;
-      
+      margin-bottom: 30px;
       @media only screen and (max-width:480px){
         font-size: 2em;
       }
@@ -236,9 +241,14 @@ header.header{
   text-align: center;
   
   .sec_comoFunciona_interna {    
+    
     h3.subtitulo{
       color: $azul-escuro;
       margin: 20px 0 70px;
+
+    }
+    p{
+      margin: 10px 0;  
     }
     
     .sec_comoFunciona_bloco{
@@ -269,6 +279,7 @@ header.header{
 .sec_diferenciais{
   background-color: $azul;
   padding: 30px 0;
+
   
   .sec_diferenciais_interna{
     display: flex;
@@ -279,7 +290,7 @@ header.header{
     
     .bloco_direita{
       //margin-right: 40px;
-      
+          
       .sec_diferenciais_img{
 //        margin-right: 20px;
 //        margin-top: 2%;       
@@ -295,7 +306,7 @@ header.header{
     .sec_diferenciais_interna-inner{
       margin: auto 15% auto 5%;
       max-width: 444px;
-      
+      color: #fff;
       @media only screen and (max-width: 768px){
         margin: 20px auto 0;
       }
@@ -303,6 +314,13 @@ header.header{
         margin: 10px 10px 0;
       }
       
+      ul{
+        margin: 20px 0;
+        li{
+          margin: 10px 0;
+          letter-spacing: 0.5px;
+        }
+      }
       
       h2.titulo{
         color: $azul-claro;
@@ -444,10 +462,10 @@ header.header{
   .sec_Contato form > {
     * {
       flex: 1 1 100%;
-      padding-right: 10px;
+      padding: 0 10px;
     }
     .form-control > * {
-      max-width: 100%;
+      border: 1px solid red;
       width: 100%;
     }
   }
