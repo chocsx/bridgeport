@@ -67,13 +67,16 @@ $cinza-escuro: #f2f1f1;
   }
 }
 
-a.btn{  
+.btn{  
   background: linear-gradient(to bottom right, $azul-escuro, $azul-claro);
   border-radius: 5px;
   font-size: 0.8125em;
   color: $gelo;
   padding: 15px;
   text-transform: uppercase;  
+  border: none;
+  cursor: pointer;
+  outline: 0;
 }
 
 .subtitulo{
@@ -465,7 +468,6 @@ header.header{
       padding: 0 10px;
     }
     .form-control > * {
-      border: 1px solid red;
       width: 100%;
     }
   }
@@ -639,9 +641,81 @@ ul.clearfix li a {
 
 	.menu-tel-msg ul {
 		display: flex;
+    justify-content: space-between;
     align-items: center;
 		left: 0;
 		bottom: 0;
 		width: 100%;
+    li{
+      a{
+        display: block;
+      }
+    }
+    .fa-phone{
+      transform: rotate(90deg);
+    }
 	}
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    @media (max-width: 600px){
+      margin: 50% auto; 
+    }
+    form{
+      max-width: 300px;
+      display: block;
+      margin: 0 auto;
+      .form-control{
+        display: block;
+        margin: 15px auto;
+        input{
+          display: block;
+          height: 36px;
+          padding: 10px;
+          width: 100%;
+        }
+        
+      }
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right; 
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
 }

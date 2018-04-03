@@ -17,7 +17,7 @@
 	
 	
 	<!-- META TAGS -->  
-	<meta name="viewport" content="width=device-width, inicial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet">   
 
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
@@ -51,7 +51,7 @@
 						<a class="onpage" href="#contato">contato</a>
 					</li>
 					<li>
-						<a href="" class="btn">abra sua conta</a>
+						<button class="btn" id="myBtn">abra sua conta</button>
 					</li>
 				</nav>
 			</ul>
@@ -63,12 +63,12 @@
 			<div class="banner-inner">
 				<h3>nosso objetivo é facilitar o seu crescimento</h3>
 				<!-- <p class="txt1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, distinctio ut iste neque autem unde eveniet nihil accusamus facere. Accusantium dolore officia, sequi iste quia expedita nihil accusamus ea voluptatibus?</p> -->
-				<a href="" class="btn">abra sua conta</a>
+				<button class="btn" id="myBtn">abra sua conta</button>
 			</div>
 			<div class="banner-inner">
 				<h3>queremos gerar valor ao seu negócio. </h3>
 				<!-- <p class="txt1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, distinctio ut iste neque autem unde eveniet nihil accusamus facere. Accusantium dolore officia, sequi iste quia expedita nihil accusamus ea voluptatibus?</p> -->
-				<a href="" class="btn">abra sua conta</a>
+				<button class="btn" id="myBtn">abra sua conta</button>
 			</div>
 		</div>
 	</div>
@@ -126,8 +126,8 @@
 			<p class="txt1">
 				Atendimento personalizado, a fim de promover a facilitação e personalização de crédito.
 			</p>
-
-			<a href="" class="btn">abra sua conta</a>
+			<br>
+			<button class="btn" id="myBtn">abra sua conta</button>
 
 		</div>
 	</section>
@@ -189,7 +189,7 @@
 					</li>
 				</ul>
 
-				<a href="" class="btn">abra sua conta</a>
+				<button class="btn" id="myBtn">abra sua conta</button>
 			</div>
 		</div>
 	</section>
@@ -245,8 +245,8 @@
 			<div class="footInfo1 frame">
 				<h3 class="titulo">onde estamos</h3>
 				<ul>
-					<li>Rua lorem ipsum - 805</li>
-					<li>Bairro Moinhos de Ventos</li>
+					<li>R. São Salvador, 451 - Primeiro andar</li>
+					<li>Bairro Santa Maria Goretti</li>
 					<li>Porto Alegre</li>
 				</ul>
 			</div>
@@ -254,8 +254,8 @@
 			<div class="footInfo2 frame">
 				<h3 class="titulo">fale conosco</h3>
 				<ul>
-					<li>+55 51 3028-8737</li>
-					<li>contato@bridgeport.com.br</li>
+					<li>+55 51 3907-0616</li>
+					<li>contato@bridgeportcapital.com.br</li>
 				</ul>
 			</div>
 
@@ -286,67 +286,112 @@
 			<li>
 				<button class="hamburger hamburger--3dx" type="button">
 					<span class="hamburger-box">
-						<span class="hamburger-inner"></span></span>
-					</button>
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
 
-					<nav class="menu-suspenso">
-						<a href="#banner">bridgeport</a>
-						<a href="#investimento">o que fazemos</a>
-						<a href="#comofunciona">como funciona</a>
-						<a href="#diferenciais">diferenciais</a>
-						<a href="#contato">contato</a>
-					</nav>
+				<nav class="menu-suspenso">
+					<a href="#banner">bridgeport</a>
+					<a href="#investimento">o que fazemos</a>
+					<a href="#comofunciona">como funciona</a>
+					<a href="#diferenciais">diferenciais</a>
+					<a href="#contato">contato</a>
+				</nav>
 
-				</li>
-				<li>
-					<a href="tel:+5551996155150">
-						<i class="fa fa-phone fa-2x"></i>
-					</a>
-				</li>
+			</li>
 
-				<li>
-					<a href="mailto:vendas@cenattiincorporadora.com.br">
-						<i class="fa fa-envelope fa-2x"></i>
-					</a>
-				</li>
-			</ul>
+			<li>
+				<a href="tel:+5551996155150">
+					<i class="fa fa-phone fa-2x"></i>
+				</a>
+			</li>
+
+			<li>
+				<a href="mailto:vendas@cenattiincorporadora.com.br">
+					<i class="fa fa-envelope fa-2x"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- FIM MENU FLOAT -->
+
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<form action="http://www.smartfactor.com.br/BRIDGEPORT/index.php" method="post" target="_blank">
+				<input name="update" value="1" type="hidden">
+				<div class="form-control">
+					<label for="fEmail">E-mail </label>
+					<input name="fEmail" id="fEmail" size="27" type="text" required>	
+				</div>
+				<div class="form-control">
+					<label for="fPassword">Senha</label>
+					<input name="fPassword" id="fPassword" size="10" maxlength="10" type="password" required>
+				</div>
+				<div class="form-control">
+					<input name="OK" value="OK" type="submit">
+				</div>
+			</form>
 		</div>
-		<!-- FIM MENU FLOAT -->
 
-		<!-- Script slider -->
-		<script src="js/jquery.js"></script>
-		<script src="js/slick.min.js"></script>
+	</div>
 
-		<script>
-			$(".slider").slick({
-				dots: true,
-				arrows: false,
-				autoplay: true,
-				speed: 500,
-				slidesToShow: 1,
-				responsive: [
-				{
-					breakpoint: 1024,
-					settings: {
-						slidesToShow: 1,
-						infinite: true,
-						dots: true
-					}
-				},
-				{
-					breakpoint: 600,
-					settings: {
-						slidesToShow: 1,
-					}
-				},
-				{
-					breakpoint: 480,
-					settings: {
-						slidesToShow: 1,
-					}
-				}  
-				]
+	<!-- Script slider -->
+	<script src="js/jquery.js"></script>
+	<script src="js/slick.min.js"></script>
+
+	<script>
+		$(".slider").slick({
+			dots: true,
+			arrows: false,
+			autoplay: true,
+			speed: 500,
+			slidesToShow: 1,
+			responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					infinite: true,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+				}
+			}  
+			]
+		});
+
+		$(document).ready(function(){
+			var modal = document.getElementById('myModal');
+			var btn = document.getElementsByClassName('btn');
+			var span = document.getElementsByClassName("close")[0];
+
+			$('.btn').click(function() {
+				modal.style.display = "block";
+				console.log('teste');
 			});
+
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
 
 			$("button.hamburger").click(function() {
 				$("nav.menu-suspenso").toggleClass("open"),
@@ -359,10 +404,14 @@
 				o = $(a).offset().top;
 				$("html, body").animate({
 					scrollTop: o
-				}, 500), $("nav.menu-suspenso").removeClass("open"),                                    $(".hamburger").removeClass("is-active")
+				}, 500), 
+				$("nav.menu-suspenso").removeClass("open"),                                   
+				$(".hamburger").removeClass("is-active")
 			});
+		});
 
 
-		</script>
-	</body>
-	</html>
+
+	</script>
+</body>
+</html>
